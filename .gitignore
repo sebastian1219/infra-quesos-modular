@@ -1,0 +1,27 @@
+# Terraform state
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+crash.log
+override.tf
+override.tf.json
+terraform.tfvars
+terraform.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# SSH keys (¡nunca subas tus claves privadas!)
+*.pem
+*.key
