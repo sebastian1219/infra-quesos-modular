@@ -1,0 +1,17 @@
+crear archivo terraform.tfvars
+
+environment = "prod"
+
+instance_type_map = {
+  prod = "t3.small"
+  dev  = "t2.micro"
+}
+
+docker_images = [
+  "errm/cheese:wensleydale",
+  "errm/cheese:cheddar",
+  "errm/cheese:stilton"
+]
+
+my_ip   = "0.0.0.0/0"       
+key_name = "mi-llave-ssh-prod"     # Reemplaza con el nombre de tu llave en EC2

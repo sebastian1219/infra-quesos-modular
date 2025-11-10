@@ -1,0 +1,21 @@
+crear archivo terraform.tfvars
+
+environment = "dev"
+
+instance_type_map = {
+  dev  = "t2.micro"   
+  prod = "t3.small"
+
+
+}
+
+docker_images = [
+  "errm/cheese:wensleydale",
+  "errm/cheese:cheddar",
+  "errm/cheese:stilton"
+]
+
+my_ip   = "0.0.0.0/0"       
+key_name = "mi-llave-ssh-dev"     # Reemplaza con el 
+
+

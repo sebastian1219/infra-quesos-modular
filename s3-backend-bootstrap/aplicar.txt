@@ -1,0 +1,4 @@
+crear carpeta terraform.tfvars
+
+bucket_name = "cheese-tfstate-prod-jsvr"
+environment = "prod"
