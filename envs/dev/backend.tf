@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
-    bucket         = "cheese-tfstate-prod"
+    bucket         = "cheese-tfstate-prod-jsvr"
     key            = "infra/terraform.tfstate"
     region         = "us-east-1"
-    use_lockfile   = true
+    dynamodb_table = "cheese-tf-lock"
     encrypt        = true
   }
 }

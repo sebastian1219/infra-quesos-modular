@@ -90,13 +90,13 @@ resource "aws_lb_target_group" "cheese_tg" {
   vpc_id   = var.vpc_id
 
   health_check {
-    path                = "/"
+    path                = "/index.html"
     protocol            = "HTTP"
-    matcher             = "200"
+    matcher             = "200-499"
     interval            = 30
-    timeout             = 5
+    timeout             = 10
     healthy_threshold   = 2
-    unhealthy_threshold = 2
+    unhealthy_threshold = 5
   }
 
   tags = {
