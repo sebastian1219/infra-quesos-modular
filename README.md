@@ -16,7 +16,7 @@ Infraestructura modular automatizada para desplegar servicios contenerizados en 
 
 cheese-factory-infra/ ├── envs/ │ ├── dev/ │ │ ├── backend.tf │ │ ├── main.tf │ │ ├── terraform.tfvars │ └── prod/ │ ├── backend.tf │ ├── main.tf │ ├── terraform.tfvars ├── modules/ │ └── app/ │ ├── main.tf │ ├── variables.tf │ ├── outputs.tf │ └── user\_data.sh ├── alb.tf ├── outputs.tf ├── security\_groups.tf ├── terraform.tfvars.example ├── variables.tf ├── vpc.tf └── README.md
 
-
+.
 
 
 
