@@ -1,0 +1,25 @@
+name: Terraform Validation
+
+on:
+  pull_request:
+    branches:
+      - main   # se ejecuta en PR hacia la rama principal
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.5.7   # ajusta a la versión que uses
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Validate
+        run: terraform validate
