@@ -1,23 +1,28 @@
 name: "CodeQL"
 
 on:
+  push:
+    branches: [ main ]   # analiza la rama principal
   pull_request:
-    branches:
-      - main   # ⚠️ Ajusta a 'main' porque tu rama principal no es 'master'
+    branches: [ main ]   # analiza PRs hacia main
 
 jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write   # necesario para publicar resultados en Security tab
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
-          languages: javascript,python  # Ajusta según el lenguaje de tu repo (ej: python, java, etc.)
+          languages: javascript,python   # ajusta según tu repo
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
+        uses: github/codeql-action/analyze@v3
