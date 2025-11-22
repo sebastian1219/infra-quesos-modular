@@ -1,0 +1,7 @@
+{
+  "name": "infra-quesos-modular",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"No hay tests definidos\" && exit 0"
+  }
+}
