@@ -1,0 +1,23 @@
+name: "CodeQL"
+
+on:
+  pull_request:
+    branches:
+      - main   # ⚠️ Ajusta a 'main' porque tu rama principal no es 'master'
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: javascript,python  # Ajusta según el lenguaje de tu repo (ej: python, java, etc.)
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
